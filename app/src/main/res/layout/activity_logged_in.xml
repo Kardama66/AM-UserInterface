@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".LoggedIn">
+
+    <TextView
+        android:id="@+id/textViewLoggedInHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:text="Logged In Page"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black" />
+
+    <Button
+        android:id="@+id/buttonLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:text="Logout"
+        android:textAllCaps="false"
+        android:background="@android:color/holo_red_light"
+        android:textColor="@android:color/white"
+        android:padding="12dp"
+        android:onClick="logout" />
+
+    <TextView
+        android:id="@+id/textViewUserInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewLoggedInHeader"
+        android:text="Place for login and email:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/editTextNewItemName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewUserInfo"
+        android:hint="Enter item name"
+        android:inputType="text"
+        android:padding="12dp"
+        android:background="@android:drawable/edit_text"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:id="@+id/editTextNewItemPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextNewItemName"
+        android:hint="Enter item price"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        android:background="@android:drawable/edit_text"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/buttonAddItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextNewItemPrice"
+        android:layout_alignParentEnd="true"
+        android:text="Add"
+        android:textAllCaps="false"
+        android:background="@android:color/holo_blue_light"
+        android:textColor="@android:color/white"
+        android:padding="12dp"
+        android:onClick="addItem"
+        android:layout_marginBottom="16dp" />
+
+    <ListView
+        android:id="@+id/listViewShoppingList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/buttonAddItem"
+        android:layout_marginTop="16dp"
+        android:dividerHeight="8dp"
+        android:padding="12dp"
+        android:background="@android:color/white"
+        android:cacheColorHint="@android:color/transparent" />
+
+</RelativeLayout>
